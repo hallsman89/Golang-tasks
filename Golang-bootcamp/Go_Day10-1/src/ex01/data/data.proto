@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+package data;  
+
+option go_package = "./go"; 
+
+message InfoAboutConnection {
+  string session_id = 1;
+  double mean = 2;
+  double std_deviation = 3;
+}
+
+message Message {
+  string session_id = 1;
+  double frequency = 2;
+  int64 timestamp_utc = 3;
+}
+
+service MiliService {
+  // Define your RPC methods here
+  rpc SendMessage(Message) returns (InfoAboutConnection);
+}
