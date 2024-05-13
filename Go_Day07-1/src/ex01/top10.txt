@@ -1,0 +1,19 @@
+File: ex01.test
+Type: cpu
+Time: Mar 12, 2024 at 8:41pm (MSK)
+Duration: 1.21s, Total samples = 830ms (68.80%)
+Entering interactive mode (type "help" for commands, "o" for options)
+(pprof) top
+Showing nodes accounting for 690ms, 83.13% of 830ms total
+Showing top 10 nodes out of 95
+      flat  flat%   sum%        cum   cum%
+     390ms 46.99% 46.99%      620ms 74.70%  Day07/ex00.MinCoins2
+     120ms 14.46% 61.45%      120ms 14.46%  runtime.futex
+      50ms  6.02% 67.47%       60ms  7.23%  runtime.scanblock
+      30ms  3.61% 71.08%      190ms 22.89%  runtime.mallocgc
+      30ms  3.61% 74.70%       30ms  3.61%  runtime.nextFreeFast (inline)
+      20ms  2.41% 77.11%       20ms  2.41%  runtime.(*limiterEvent).stop
+      20ms  2.41% 79.52%       20ms  2.41%  runtime.memclrNoHeapPointers
+      10ms  1.20% 80.72%       10ms  1.20%  runtime.(*mSpanStateBox).get (inline)
+      10ms  1.20% 81.93%       10ms  1.20%  runtime.(*mcache).refill
+      10ms  1.20% 83.13%       10ms  1.20%  runtime.(*pallocBits).summarize
